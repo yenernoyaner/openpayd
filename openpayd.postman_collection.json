@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "318f87d6-9cb2-449a-8b66-86cef0bf76b8",
+		"name": "openpayd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "convert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sourceAmount\": \"2500\",\r\n    \"sourceCurrency\":\"EUR\",\r\n    \"targetCurrency\":\"GBP\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/api/convert",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"convert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "conversionList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8085/api/conversions/?conversionDate=2022-01-16",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"conversions",
+						""
+					],
+					"query": [
+						{
+							"key": "transactionId",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "conversionDate",
+							"value": "2022-01-16"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swagger Api Docs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/v2/api-docs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v2",
+						"api-docs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fxrate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8085/api/fxrates/fxrate?sourceCurrency=USD&targetCurrency=TRY",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"fxrates",
+						"fxrate"
+					],
+					"query": [
+						{
+							"key": "sourceCurrency",
+							"value": "USD"
+						},
+						{
+							"key": "targetCurrency",
+							"value": "TRY"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
